@@ -1,38 +1,160 @@
-.App {
+/* shopping */
+.menu-icon{
+  background-image: url("https://icons-for-free.com/iconfiles/png/512/line+menu+more+buttton+three+icon-1320186212273781168.png");
+}
+/* .menu-icon{
+  display: inline-block;
+  width: 2rem;
+  height: 1.5rem;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+} */
+.home-col{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.home-col-about{
+  display: flex;
+  flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    align-content: space-between;
+        flex-direction: column;
+        width: max-content;
+        padding-left: 60px;
+}
+.start-menu{
+  display: flex;
+  flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.shop-downwards{
+  display: flex;
+  cursor:pointer;
+}
+.cart-design{
+  display: flex;
+  border:black 2px solid;
+  gap:5px;
+  padding:3px;
+  margin:2px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+.cart-value{
+  background-color: black;
+  color: white;
+  width:25px;
+  height: 25px;
+  border-radius: 15px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .menu-icon{
+  display:none;
+} */
+.menu-icon-img{
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* {heading} */
+.head-head{
+  position: relative;
+  background-color: black;
+  opacity: 0.85;
+  padding-top:5rem;
+  padding-bottom:5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.head-div2{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ font-family: sans-serif;
+}
+.shop{
+color: white;
+font-weight: 800;
+letter-spacing: 1px;
+font-size: 3rem;
+margin: 0;
+}
+.with{
+  color: gray;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* {section} */
+.sec{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.container-det{
+  padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin: 3rem;
+}
+.new-product{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  column-gap: 10px;
+}
+.det-poster{
+  border: grey 1px solid;
+  width:210px;
   display: flex;
   flex-direction: column;
+}
+.tshirt{
+  height: 250px;
+  width: 210px;
+  object-fit: cover;
+}
+.product-con{
+  padding: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+.cart-div2{
+  margin: 30px;
+}
+.cart-but{
+  text-decoration: none;
+  color: black;
+  border: black 1px solid;
+  padding: 10px;
+  cursor: pointer;
+}
+.cart-but:hover{
+background: black;
+color: white;
+}
+/* {footer} */
+.foot{
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+  opacity: 0.85;
+}
+.foot-div{
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.copyright{
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  letter-spacing: 1px;
+  font-family: sans-serif;
 }
