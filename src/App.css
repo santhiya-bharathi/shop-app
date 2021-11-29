@@ -36,7 +36,9 @@
 }
 .shop-downwards{
   display: flex;
-  cursor:pointer;
+  cursor: pointer;
+  flex-wrap: wrap;
+  align-items: center;
 }
 .cart-design{
   display: flex;

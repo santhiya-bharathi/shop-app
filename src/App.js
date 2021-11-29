@@ -1,6 +1,10 @@
 import './App.css';
 import {useState} from "react";
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import ExpandLessIcon from '@mui/icons-material/ExpandLess';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 export default function App() {
 const products =[{
   picture:"https://adn.damensch.com/wp-content/uploads/2021/04/4-17.jpg",
@@ -73,7 +77,7 @@ function Title(){
   const items1 = {
     display:menu?"none":"block"
   };
-  
+  const [show,setShow] = useState(true);
   return(
     /* Navigation */
     <nav>
@@ -91,7 +95,11 @@ function Title(){
       <div  className="home-col-about" style={items1}>
         <p>Home</p>
         <p>About</p>
-        <p className="shop-downwards" onClick={()=>setShop(!shop)}>Shop▼</p>
+        <p className="shop-downwards" onClick={()=>setShop(!shop)}>Shop
+        <IconButton onClick={()=>setShow(!show)} color="primary" aria-label="description">
+ {show?<ExpandMoreIcon/>:<ExpandLessIcon/>}
+</IconButton>
+        </p>
         <div className="shop-downwards-option" style={items}>
         <p><hr></hr></p>
         <p>All Products</p>
