@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from "react";
+import Button from '@mui/material/Button';
 export default function App() {
 const products =[{
   picture:"https://adn.damensch.com/wp-content/uploads/2021/04/4-17.jpg",
@@ -62,6 +63,7 @@ const products =[{
  </div>
   );
 }
+//header 
 function Title(){
   const [shop, setShop] = useState(true);
   const [menu,setMenu] = useState(true);
@@ -71,6 +73,7 @@ function Title(){
   const items1 = {
     display:menu?"none":"block"
   };
+  
   return(
     /* Navigation */
     <nav>
@@ -104,6 +107,7 @@ function Title(){
    
   );
 }
+//shop heading
 function Head() {
   return (
     <header className="head-head">
@@ -116,6 +120,7 @@ function Head() {
     </header>
   );
 }
+
 function Productlist({products}) {
   return (
     <section className="sec">
@@ -146,7 +151,7 @@ function Details({ picture, productname, prize }) {
                   <p>{prize}</p>
                   <div>
                     <div className="cart-div2">
-                      <a className="cart-but" href="#!">Add to cart</a>
+                     <Counter/>
                     </div>
                   </div>
                 </div>
@@ -154,7 +159,7 @@ function Details({ picture, productname, prize }) {
             </div>
   );
 }
-
+//footer
 function Foot(){
   return(
   <footer className="foot">
@@ -162,5 +167,16 @@ function Foot(){
       <p className="copyright">Copyright © your website 2021</p>
     </div>
   </footer>
+  );
+}
+//add to cart function
+function Counter(){
+  const [add, setAdd] = useState(0);
+  // const [remove, setRemove] = useState(0);
+  return(
+<div className="button-like">
+<Button variant="outlined"  aria-label="add" onClick={()=> setAdd(add+1)}>Add to cart({add})</Button>
+{/* <Button variant="outlined" aria-label="remove" color="error" onClick={()=> setRemove(remove+1)}>Remove({remove})</Button>   */}
+  </div>
   );
 }
